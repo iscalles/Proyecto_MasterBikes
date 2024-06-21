@@ -1,63 +1,39 @@
 {% extends 'core/base.html' %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterBikes: Inicio</title>
-    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-</head>
-<body>
-    <div class="header-buttons">
-        <h1>MASTER BIKES</h1>
-        <button class="contact-button">📞</button>
-        <button onclick="location.href='login.html'" class="login-button">Ingresa aquí</button>
-    </div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">ARTÍCULOS</a></li>
-                <li><a href="#">ARRIENDOS</a></li>
-                <li><a href="#">REPARACIONES</a></li>
-                <li><a href="#">OFERTAS</a></li>
-                <li><a href="#">ACCESORIOS</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+{% load static %}
+    {% block content %}
     <main>
         <section class="hero">
             <div class="hero-images">
-                <img src="path/to/image1.jpg" alt="Cyclists">
-                <img src="path/to/image2.jpg" alt="Cyclist">
-                <img src="path/to/image3.jpg" alt="Kids on bikes">
+                <img src="{% static 'core/img/ciclista.jpg' %}" alt="Cyclists">
+                <img src="{% static 'core/img/ciclistas.jpg' %}" alt="Cyclist">
+                <img src="{% static 'core/img/miniciclistas.jpg' %}" alt="Kids on bikes">
             </div>
-            <p>Are you looking for an outer or even accessories that have streetwear style? Look no other! We dedicated our ideas to getting you a perfect fit for daily activities!</p>
-            <button class="about-us-button">Sobre nosotros</button>
+            <div class="contenedor-nosotros">
+                <p>Somos una familia que fundó la fábrica de bicicletas "San Diego", nos dedicamos desde hace 30 años a la fabricación de diversos tipos de bicicletas y triciclos.</p>
+                <button class="about-us-button">Sobre nosotros</button>
+            </div>
         </section>
         <section class="categories">
             <div class="category">
-                <img src="path/to/bicicletas.jpg" alt="Bicicletas">
+                <img src="{% static 'core/img/bicicleta.jpg' %}" alt="Bicicletas">
                 <p>Bicicletas</p>
             </div>
             <div class="category">
-                <img src="path/to/cascos.jpg" alt="Cascos">
+                <img src="{% static 'core/img/cascos.jpg' %}" alt="Cascos">
                 <p>Cascos</p>
             </div>
             <div class="category">
-                <img src="path/to/mantenimiento.jpg" alt="Mantenimiento">
+                <img src="{% static 'core/img/mantencion.jpg' %}" alt="Mantenimiento">
                 <p>Mantenimiento</p>
             </div>
             <div class="category">
-                <img src="path/to/arriendo.jpg" alt="Arriendo">
+                <img src="{% static 'core/img/arriendo.jpg' %}" alt="Arriendo">
                 <p>Arriendo</p>
             </div>
             <div class="category">
-                <img src="path/to/accesorios.jpg" alt="Accesorios">
+                <img src="{% static 'core/img/accesorios.jpg' %}" alt="Accesorios">
                 <p>Accesorios</p>
             </div>
         </section>
     </main>
-</body>
-</html
+    {% endblock content %}

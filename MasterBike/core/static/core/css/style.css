@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -31,32 +31,30 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-h1 {
+.right-panel h1{
     font-size: 40px;
     color: #8b3cf5;
 }
-
-a {
+.right-panel a{
     color: #d77ab8;
     text-decoration: none;
     margin-bottom: 20px;
 }
 
-form {
+.right-panel form{
     display: flex;
     flex-direction: column;
     align-items: center; /* Center all form elements */
 }
 
-label {
+.form-reg label {
     font-size: 14px;
     margin-bottom: 5px;
     text-align: left;
     width: 100%; /* Ensure labels span the full width */
 }
 
-input {
+.form-reg input{
     margin-bottom: 20px;
     padding: 10px;
     font-size: 14px;
@@ -65,7 +63,7 @@ input {
     width: 500px; /* Set width for inputs */
 }
 
-button {
+.form-reg button{
     background-color: #8b3cf5;
     color: #fff;
     border: none;
@@ -81,36 +79,62 @@ button {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 10px 20px;
     background-color: #fff;
+    flex-direction: column;
 }
 
-.header-buttons h1 {
-    margin: 0;
-    padding: auto;
-    text-align: center;
+header button{
+    text-align: right;
 }
-.header-buttons {
+
+.contenedor-header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-buttons{
+    text-align: right;
+    margin-left: auto;
     gap: 10px;
-    align-content: flex-end;
 }
-.contact-button, .login-button {
-    border: none;
-    margin: 20px;
-    border: 10px;
+.header-buttons button{
+    font-size: medium;
+    background-color:white;
+    border-color: #d77ab8;
+    color: black;
     padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
-    background-color: #fff;
-    border: 1px solid #000;
-    align-self: end;
+    border-style: solid;
 }
-.login-button{
-    color: #000;
-    align-self: flex-end;
+.titulo{
+    display: flex;
+    text-align: center;
+    text-shadow: #8b3cf5;
+    flex-direction: column;
+    font: bolder;
+    margin-bottom: 20px;
 }
+.lista{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: auto;
+}
+.lista a {
+    border: solid 2px #000;
+    padding: 20px 30px;
+}
+nav{
+    align-items: baseline;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -124,37 +148,51 @@ nav ul li a {
     color: #000;
     font-weight: bold;
 }
-
-
-
-
-
 .hero {
     text-align: center;
     padding: 20px;
 }
 
 .hero-images {
+    width: 1200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    background-image: url(https://i.pinimg.com/564x/5a/82/09/5a8209e560031605a8d6393985667e92.jpg) ;
+    margin: auto;
+    padding: 10px;
 }
 
 .hero-images img {
-    width: 300px;
+    width: 600px;
     height: auto;
+    margin-right: 50px;
+    margin-left: 20px;
 }
 
 .about-us-button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    border: none;
-    background-color: #000;
-    color: #fff;
+    border: solid 2px #000;
+    background-color: #fff;
+    color: #000;
     cursor: pointer;
+    border-radius: 30px;
+    font-size: medium;
 }
-
+.contenedor-nosotros{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    transform: translateX(6%);
+}
+.contenedor-nosotros p{
+    font-size: medium;
+    font: bold;
+}
 .categories {
     display: flex;
     justify-content: space-around;
@@ -165,14 +203,21 @@ nav ul li a {
 .category {
     text-align: center;
     width: 150px;
+    border: solid 2px #000;
+    padding: 30px;
 }
 
 .category img {
     width: 100%;
-    height: auto;
+    height: 100px;
+    padding: 30px 0;
 }
 
 .category p {
     margin-top: 10px;
     font-weight: bold;
+}
+.header h1{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }

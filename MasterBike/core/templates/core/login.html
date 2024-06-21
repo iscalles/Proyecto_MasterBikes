@@ -1,22 +1,14 @@
 {% extends 'core/base.html' %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
     {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio de Sesión</title>
-    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-</head>
-<body>
+    {% block content %}
     <div class="container">
         <div class="left-panel">
             <img src="{% static 'core/img/registro.jpg' %}" alt="">
         </div>
         <div class="right-panel">
             <h1>Ingresa</h1>
-            <p><a href="registro.html">¿No tienes una cuenta? Registrate aquí.</a></p>
-            <form>
+            <p><a href='/registro'>¿No tienes una cuenta? Registrate aquí.</a></p>
+            <form class="form-reg">
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" placeholder="hola@gmail.com">
                 
@@ -27,5 +19,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+    {% endblock content %}
