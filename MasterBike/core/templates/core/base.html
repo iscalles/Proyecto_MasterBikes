@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MasterBikes - {% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
-
+    <div class="contenedor-header">
+        <h1 class="titulo">MASTER BIKES</h1>
+        <div class="header-buttons">
+            <button onclick="location.href='/login'">Ingresa aquí</button>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="lista">
+                <ul>
+                    <li><a href="#">ARTÍCULOS</a></li>
+                    <li><a href="#">ARRIENDOS</a></li>
+                    <li><a href="#">REPARACIONES</a></li>
+                    <li><a href="#">OFERTAS</a></li>
+                    <li><a href="#">ACCESORIOS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     {% block content %}
 
     {% endblock %}
